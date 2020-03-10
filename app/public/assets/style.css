@@ -17,3 +17,14 @@ body{
     margin: 0 auto;
     padding: 15px;
 }
+
+.surveyBody{
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: rgba(249, 156, 156, 0.653);
+    padding: 15px;
+}
+
+#lowerTag{
+    position: fixed;
+    bottom: 0;
+}
