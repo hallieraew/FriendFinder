@@ -6,28 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder | Survey</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Open+Sans+Condensed:300&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="surveyBody">
+        <h1>Friend Finder Survey</h1>
+        <br>
 
-        <form>
-            <div class="form-group">
+        <form class="mx-auto">
+            <div class="form-group mx-auto">
                 <label for="exampleFormControlInput1">Name (required)</label>
-                <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                <input type="name" class="form-control" id="name" placeholder="Name">
             </div>
             <div class="form-group">
-                    <label for="exampleFormControlInput1">Picture (required)</label>
-                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-                </div>
+                <label for="exampleFormControlInput1">Picture (required)</label>
+                <input type="name" class="form-control" id="url" placeholder="Pic URL">
+            </div>
             <div class="form-group">
                 <label for="Question 1">I am a morning person. I love to get up before the sun.</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="question1">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -38,7 +40,7 @@
 
             <div class="form-group">
                 <label for="Question 2">I love laughing and being silly.</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="question2 ">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -49,7 +51,7 @@
 
             <div class="form-group">
                 <label for="Question 3">I really like to try new things and be outside my comfort zone.</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="question3 ">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -60,7 +62,7 @@
 
             <div class="form-group">
                 <label for="Question 4">I prefer to be outside in nature.</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="question4 ">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -71,7 +73,7 @@
 
             <div class="form-group">
                 <label for="Question 5">I am a health nut, eating clean is super important to me.</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="question5 ">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -82,7 +84,7 @@
 
             <div class="form-group">
                 <label for="Question 6">I rather stay in by myself than be out with people.</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="question6 ">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -92,51 +94,110 @@
             </div>
 
             <div class="form-group">
-                    <label for="Question 7">Total animal lover.</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                <label for="Question 7">Total animal lover.</label>
+                <select class="form-control" id="question7 ">
                         <option>1 (Strongly disagree)</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5 (Strongly agree)</option>
                     </select>
-                </div>
+            </div>
 
-                <div class="form-group">
-                        <label for="Question 8">It is really important that things around me are very neat and tidy.</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+            <div class="form-group">
+                <label for="Question 8">It is really important that things around me are very neat and tidy.</label>
+                <select class="form-control" id="question8 ">
                             <option>1 (Strongly disagree)</option>
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
                             <option>5 (Strongly agree)</option>
                         </select>
-                    </div>
+            </div>
 
-                    <div class="form-group">
-                            <label for="Question 9">Family is super important to me, I love spending time with my family.</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+            <div class="form-group">
+                <label for="Question 9">Family is super important to me, I love spending time with my family.</label>
+                <select class="form-control" id="question9 ">
                                 <option>1 (Strongly disagree)</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5 (Strongly agree)</option>
                             </select>
-                        </div>
+            </div>
 
-                        <div class="form-group">
-                                <label for="Question 10">Music is life.</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
+            <div class="form-group">
+                <label for="Question 10">Music is life.</label>
+                <select class="form-control" id="question10 ">
                                     <option>1 (Strongly disagree)</option>
                                     <option>2</option>
                                     <option>3</option>
                                     <option>4</option>
                                     <option>5 (Strongly agree)</option>
                                 </select>
-                            </div>
+            </div>
         </form>
-
+        <button type="button" id="submit" class="btn btn-danger btn-lg">Find Love!</button>
     </div>
+
+    <div class="modal fade surveyBody" id="errInput" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                    <h4 class="modal-title">Request Incomplete!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Uh oh! We are unable to process your submission due to some unanswered questions. Please verify you have given a response to every question and try again!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+<script type="text/javascript">
+    $("#submit").click(function() {
+
+        event.preventDefault();
+
+        var answers = {
+            name: $("#name").val().trim(),
+            picture: $("#url").val(),
+            scores: [
+                $("#question1").val(),
+                $("#question2").val(),
+                $("#question3").val(),
+                $("#question4").val(),
+                $("#question5").val(),
+                $("#question6").val(),
+                $("#question7").val(),
+                $("#question8").val(),
+                $("#question9").val(),
+                $("#question10").val(),
+            ]
+        };
+
+        var valid = true;
+
+        switch (valid) {
+            case answers.name = "":
+                return false;
+                break;
+            case answers.picture = "":
+                return false;
+                break;
+            case answers.scores = "":
+                return false;
+                break;
+            default:
+                $("#errInput").modal('show');
+        }
+    });
+</script>
 
 </html>

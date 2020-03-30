@@ -20,14 +20,14 @@ app.post("/api/friends", function (req, res) {
         var highestDiff = 50;
         var totalDifference = 0;
         for(var j = 0; j < friends[i].scores.length; j++) {
-          var difference = Math.abs(user.scores[j] - friends[i].scores[j]);
-          totalDifference += difference;
+            var difference = Math.abs(user.scores[j] - friends[i].scores[j]);
+            totalDifference += difference;
         }
-  
+        
         if(totalDifference < highestDiff) {
-          bestMatch = bestMatchIndex;
-          bestMatchIndex= i;
-          highestDiff = totalDifference;
+            bestMatch = bestMatchIndex;
+            bestMatchIndex= i;
+            highestDiff = totalDifference;
         }
       }
 

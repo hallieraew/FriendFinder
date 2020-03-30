@@ -4,9 +4,13 @@ var app = express();
 var PORT = 3000;
 
 app.use(express.urlencoded({ extended: true }));
+
 app.use(express.json());
 
-app.listen(PORT, function () {
+require("./app/routing/htmlRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
+
+app.listen(PORT, function() {
     console.log("App is listening on PORT " + PORT);
 });
 
