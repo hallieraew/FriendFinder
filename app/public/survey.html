@@ -15,10 +15,11 @@
 
 <body>
     <div class="surveyBody">
+        <br>
         <h1>Friend Finder Survey</h1>
         <br>
 
-        <form class="mx-auto">
+        <form class="mx-auto" method="post" action="/api/friends">
             <div class="form-group mx-auto">
                 <label for="exampleFormControlInput1">Name (required)</label>
                 <input type="name" class="form-control" id="name" placeholder="Name">
@@ -138,6 +139,7 @@
             </div>
         </form>
         <button type="button" id="submit" class="btn btn-danger btn-lg">Find Love!</button>
+        <br>
     </div>
 
     <div class="modal fade surveyBody" id="errInput" role="dialog">
@@ -197,6 +199,7 @@
             default:
                 $("#errInput").modal('show');
         }
+
     });
 </script>
 
