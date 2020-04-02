@@ -19,7 +19,7 @@
         <h1>Friend Finder Survey</h1>
         <br>
 
-        <form class="mx-auto" method="post" action="/api/friends">
+        <form id="friendForm" class="mx-auto" method="post" action="/api/friends">
             <div class="form-group mx-auto">
                 <label for="exampleFormControlInput1">Name (required)</label>
                 <input type="name" class="form-control" id="name" placeholder="Name">
@@ -33,7 +33,7 @@
                 <select class="form-control" id="question1">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
-                    <option>3</option>
+                    <option selected>3</option>
                     <option>4</option>
                     <option>5 (Strongly agree)</option>
                 </select>
@@ -41,10 +41,10 @@
 
             <div class="form-group">
                 <label for="Question 2">I love laughing and being silly.</label>
-                <select class="form-control" id="question2 ">
+                <select class="form-control" id="question2">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
-                    <option>3</option>
+                    <option selected>3</option>
                     <option>4</option>
                     <option>5 (Strongly agree)</option>
                 </select>
@@ -52,10 +52,10 @@
 
             <div class="form-group">
                 <label for="Question 3">I really like to try new things and be outside my comfort zone.</label>
-                <select class="form-control" id="question3 ">
+                <select class="form-control" id="question3">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
-                    <option>3</option>
+                    <option selected>3</option>
                     <option>4</option>
                     <option>5 (Strongly agree)</option>
                 </select>
@@ -63,10 +63,10 @@
 
             <div class="form-group">
                 <label for="Question 4">I prefer to be outside in nature.</label>
-                <select class="form-control" id="question4 ">
+                <select class="form-control" id="question4">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
-                    <option>3</option>
+                    <option selected>3</option>
                     <option>4</option>
                     <option>5 (Strongly agree)</option>
                 </select>
@@ -74,10 +74,10 @@
 
             <div class="form-group">
                 <label for="Question 5">I am a health nut, eating clean is super important to me.</label>
-                <select class="form-control" id="question5 ">
+                <select class="form-control" id="question5">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
-                    <option>3</option>
+                    <option selected>3</option>
                     <option>4</option>
                     <option>5 (Strongly agree)</option>
                 </select>
@@ -85,10 +85,10 @@
 
             <div class="form-group">
                 <label for="Question 6">I rather stay in by myself than be out with people.</label>
-                <select class="form-control" id="question6 ">
+                <select class="form-control" id="question6">
                     <option>1 (Strongly disagree)</option>
                     <option>2</option>
-                    <option>3</option>
+                    <option selected>3</option>
                     <option>4</option>
                     <option>5 (Strongly agree)</option>
                 </select>
@@ -96,10 +96,10 @@
 
             <div class="form-group">
                 <label for="Question 7">Total animal lover.</label>
-                <select class="form-control" id="question7 ">
+                <select class="form-control" id="question7">
                         <option>1 (Strongly disagree)</option>
                         <option>2</option>
-                        <option>3</option>
+                        <option selected>3</option>
                         <option>4</option>
                         <option>5 (Strongly agree)</option>
                     </select>
@@ -107,10 +107,10 @@
 
             <div class="form-group">
                 <label for="Question 8">It is really important that things around me are very neat and tidy.</label>
-                <select class="form-control" id="question8 ">
+                <select class="form-control" id="question8">
                             <option>1 (Strongly disagree)</option>
                             <option>2</option>
-                            <option>3</option>
+                            <option selected>3</option>
                             <option>4</option>
                             <option>5 (Strongly agree)</option>
                         </select>
@@ -118,10 +118,10 @@
 
             <div class="form-group">
                 <label for="Question 9">Family is super important to me, I love spending time with my family.</label>
-                <select class="form-control" id="question9 ">
+                <select class="form-control" id="question9">
                                 <option>1 (Strongly disagree)</option>
                                 <option>2</option>
-                                <option>3</option>
+                                <option selected>3</option>
                                 <option>4</option>
                                 <option>5 (Strongly agree)</option>
                             </select>
@@ -129,16 +129,18 @@
 
             <div class="form-group">
                 <label for="Question 10">Music is life.</label>
-                <select class="form-control" id="question10 ">
+                <select class="form-control" id="question10">
                                     <option>1 (Strongly disagree)</option>
                                     <option>2</option>
-                                    <option>3</option>
+                                    <option selected>3</option>
                                     <option>4</option>
                                     <option>5 (Strongly agree)</option>
                                 </select>
             </div>
         </form>
         <button type="button" id="submit" class="btn btn-danger btn-lg">Find Love!</button>
+
+        <button type="button" onClick="window.location.href= '/'" class="btn btn-danger btn-lg">Go back!</button>
         <br>
     </div>
 
@@ -160,6 +162,23 @@
         </div>
     </div>
 
+    <div class="modal fade surveyBody" id="matchModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Successful Match!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Match Name: <span id="matchName"></span></p>
+                    <img id="matchPhoto" alt="Match photo">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 <script type="text/javascript">
@@ -171,38 +190,35 @@
             name: $("#name").val().trim(),
             picture: $("#url").val(),
             scores: [
-                $("#question1").val(),
-                $("#question2").val(),
-                $("#question3").val(),
-                $("#question4").val(),
-                $("#question5").val(),
-                $("#question6").val(),
-                $("#question7").val(),
-                $("#question8").val(),
-                $("#question9").val(),
-                $("#question10").val(),
+                parseInt($("#question1").val()),
+                parseInt($("#question2").val()),
+                parseInt($("#question3").val()),
+                parseInt($("#question4").val()),
+                parseInt($("#question5").val()),
+                parseInt($("#question6").val()),
+                parseInt($("#question7").val()),
+                parseInt($("#question8").val()),
+                parseInt($("#question9").val()),
+                parseInt($("#question10").val()),
             ]
         };
+
         console.log(answers.name);
         console.log(answers.picture);
         console.log(answers.scores);
 
-        var valid = true;
-
-        switch (valid) {
-            case answers.name = "":
-                return false;
-                break;
-            case answers.picture = "":
-                return false;
-                break;
-            case answers.scores = "":
-                return false;
-                break;
-            default:
-                $("#errInput").modal('show');
+        if (!answers.name || !answers.picture) {
+            $("#errInput").modal("show");
+            return false;
+        } else {
+            $.post("/api/friends", answers, function(res) {
+                console.log(res);
+                $("#matchName").text(res.name)
+                $("#matchPhoto").attr("src", res.picture)
+                $("#matchModal").modal("show")
+            })
+            $("#friendForm")[0].reset();
         }
-
     });
 </script>
 
