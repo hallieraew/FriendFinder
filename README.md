@@ -20,3 +20,6 @@ Ex: ![Screenshot of successful match.](app/public/assets/images/successMatch.gif
 
 This was built using JavaScript, jQuery, HTML, CSS, Bootstrap and Express for the server connection. Upon cloning this repo, you will need to install the NPM package for Express and ensure CDN for Bootstrap and jQuery are up to date.
 
+## Deploy
+
+You can find this deployed on the Heroku https://dry-plains-86531.herokuapp.com/
