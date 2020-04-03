@@ -6,7 +6,7 @@ This full-stack site will take in results from your users' surveys, then compare
 
 When a user visits the site they are brought to a landing page. They can then navigate to the survey and answer 10 questions from 1(strongly agree) to 5(strongly disagree). 
 
-    Ex: ![Screenshot of first page to the survey page.](/images/mainToSurvey.gif)
+    Ex: ![Screenshot of first page to the survey page.](/app/public/assets/images/mainToSurvey.gif)
 
 This includes client-side validation which will not allow a user to submit their answers if all fields have not been filled out. A modal will display in the event a field is missing:
 
